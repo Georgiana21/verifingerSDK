@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Neurotec.Devices.Virtual</name>
+    </assembly>
+    <members>
+        <member name="P:Neurotec.Devices.Virtual.NdmVirtual.NativeModule">
+            <summary>
+            Defines the native module of the object.
+            </summary>
+        </member>
+    </members>
+</doc>

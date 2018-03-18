@@ -1,0 +1,1 @@
+javaw -jar latent-fingerprint-sample.jar

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="neurotec-devices">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/neurotec-devices.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

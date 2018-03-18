@@ -1,0 +1,1 @@
+javaw -jar simple-faces-sample.jar

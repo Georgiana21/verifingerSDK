@@ -1,0 +1,1 @@
+%SystemRoot%\SysWOW64\javaw -jar devices-sample.jar

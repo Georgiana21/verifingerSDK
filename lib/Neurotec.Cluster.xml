@@ -1,0 +1,1232 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Neurotec.Cluster</name>
+    </assembly>
+    <members>
+        <member name="T:Neurotec.Cluster.Communication">
+            <summary>
+            Provides functionality for sending and receiving packets
+            to/from server. 
+            </summary>
+        </member>
+        <member name="M:Neurotec.Cluster.Communication.#ctor">
+            <summary>
+            Initializes a new instance of the Communication class. 
+            </summary>
+        </member>
+        <member name="M:Neurotec.Cluster.Communication.#ctor(System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the Communication class.
+            </summary>
+            <param name="server">Server address.</param>
+            <param name="port">Server port.</param>
+        </member>
+        <member name="M:Neurotec.Cluster.Communication.Connect(System.String,System.Int32)">
+            <summary>
+            Establishes connection with server.
+            </summary>
+            <param name="server">Server address.</param>
+            <param name="port">Server port.</param>
+            <returns>
+            One of the ClusterStatusCode values.
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.Communication.Close">
+            <summary>
+            Closes connection.
+            </summary>
+            <returns>
+            One of the ClusterStatusCode values.
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.Communication.SendPacket(Neurotec.Cluster.ClientPacket)">
+            <summary>
+            Sends client's packet to server.
+            </summary>
+            <param name="packet">ClientPacket object.</param>
+            <returns>
+            One of the ClusterStatusCode values.
+            </returns>    
+        </member>
+        <member name="M:Neurotec.Cluster.Communication.SendPacket(Neurotec.Cluster.AdminPacket)">
+            <summary>
+            Sends client's packet to server.
+            </summary>
+            <param name="packet">ClientPacket object.</param>
+            <returns>
+            One of the ClusterStatusCode values. 
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.Communication.SendReceivePacket(Neurotec.Cluster.ClientPacket,Neurotec.Cluster.ClientPacketReceived@)">
+            <summary>
+            Sends client packet to server and receives server packet.
+            </summary>
+            <param name="packetIn">ClientPacket object to send to
+                                    server.</param>
+            <param name="receivedPacket">[out] ClientPacketReceived
+                                          object.</param>
+            <returns>
+            One of the ClusterStatusCode values. 
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.Communication.SendReceivePacket(Neurotec.Cluster.AdminPacket,Neurotec.Cluster.AdminPacketReceived@)">
+            <summary>
+            Sends client packet to server and receives server packet.
+            </summary>
+            <param name="packetIn">ClientPacket object to send to
+                                    server.</param>
+            <param name="receivedPacket">[out] ClientPacketReceived
+                                          object.</param>
+            <returns>
+            One of the ClusterStatusCode values. 
+            </returns>
+        </member>
+        <member name="T:Neurotec.Cluster.ClusterPacketType">
+            <summary>
+            Specifies packet types used to communicate with server. 
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterPacketType.TaskID">
+            <summary>
+            Server packet contains server matching task id. 
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterPacketType.Result">
+            <summary>
+            Server packet contains server matching task results. 
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterPacketType.AdminCompleteInfo">
+            <summary>
+            Server packet contains server complete running tasks
+            information.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterPacketType.AdminShortInfo">
+            <summary>
+            Server packet contains server short running tasks
+            information. 
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterPacketType.AdminNodesInfo">
+            <summary>
+            Cluster packet contains cluster nodes information. 
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterPacketType.AdminResultsInfo">
+            <summary>
+            Server packet contains server matching tasks results
+            information. 
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterPacketType.TaskProgress">
+            <summary>
+            Server packet contains server matching task progress. 
+            </summary>
+        </member>
+        <member name="T:Neurotec.Cluster.ClusterStatusCode">
+            <summary>
+            Specifies error codes used in Neurotec.Cluster library. 
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterStatusCode.OK">
+            <summary>
+            No error.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterStatusCode.InternalError">
+            <summary>
+            Memory or initialization error.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterStatusCode.ArgumentError">
+            <summary>
+            Function arguments are not valid.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterStatusCode.ExtractionError">
+            <summary>
+            Failed to extract cluster_packet.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterStatusCode.PacketError">
+            <summary>
+            Server packet is corrupted.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterStatusCode.AlgorithmError">
+            <summary>
+            Algorithm error.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterStatusCode.HandleError">
+            <summary>
+            Handle error.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterStatusCode.NotActivatedError">
+            <summary>
+            Library is not activated.
+            </summary>
+        </member>
+        <member name="T:Neurotec.Cluster.ClusterTaskMode">
+            <summary>
+            Specifies server task mode. 
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterTaskMode.Normal">
+            <summary>
+            Matching task returns all results from database.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterTaskMode.First">
+            <summary>
+            Matching task returns first result which match searching criteria.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterTaskMode.Details">
+            <summary>
+            Matching task returns additional information with results from database.
+            </summary>
+        </member>
+        <member name="T:Neurotec.Cluster.ClusterNodeState">
+            <summary>
+            Represents cluster node state. 
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterNodeState.Starting">
+            <summary>
+            Cluster node is registered with sever, but it have no database received.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterNodeState.Ready">
+            <summary>
+            Cluster node has database received and is ready for matching tasks. 
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterNodeState.Removing">
+            <summary>
+            Cluster node has its part of database removed, and it not receiving matching task.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterNodeState.Spare">
+            <summary>
+            Cluster node is in a Spare node mode.
+            </summary>
+        </member>
+        <member name="T:Neurotec.Cluster.ClusterServerStatus">
+            <summary>
+            Represents cluster server state.
+            </summary>
+            <remarks>
+            <b>NClusterServer/NServer</b>
+            
+            This enumeration is used in situations when:
+              1. Starting/restarting server till server is ready or error
+                 occurred.
+            In case of error is occurred server administrator must check
+            server and nodes logs for fixing the error. Error occurred
+            during matching templates can not be managed by
+            Neurotec.Cluster.ClusterServerStatus
+            
+            
+            
+            <b>MegaMatcher Accelerator</b>
+            
+            This enumeration is used in situations when:
+              1. Starting/restarting server process till server is ready
+                 or error occurred.
+              2. Flushing added templates till server is ready or error
+                 occurred.
+              3. Recreating database till server is ready or error
+                 occurred.
+            In case of error is occurred server administrator must check
+            server and nodes logs for fixing the error. Error occurred
+            during matching, inserting or deleting templates can not be
+            managed by Neurotec.Cluster.ClusterServerStatus
+            </remarks>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterServerStatus.Preparing">
+            <summary>
+            Server is preparing data for work.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterServerStatus.Ready">
+            <summary>
+            Server is ready to receive tasks. 
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterServerStatus.Error">
+            <summary>
+            Server is in erroneous state. 
+            </summary>                    
+        </member>
+        <member name="T:Neurotec.Cluster.ClusterInsertDeleteResult">
+            <summary>
+            Enumerates insert and delete tasks completion values. 
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterInsertDeleteResult.ServerNotReady">
+            <summary>
+            Indicates that server is not ready.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterInsertDeleteResult.Failed">
+            <summary>
+            Indicates that insert or delete task failed.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterInsertDeleteResult.Waiting">
+            <summary>
+            Indicates that insert or delete task is waiting in tasks queue.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterInsertDeleteResult.Succeeded">
+            <summary>
+            Indicates that insert or delete task succeeded.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterInsertDeleteResult.PartiallySucceeded">
+            <summary>
+            Indicates that insert or delete task was partially completed.
+            </summary>
+        </member>
+        <member name="T:Neurotec.Cluster.ClusterStandardTemplateType">
+            <summary>
+            Enumerates type values for standard template.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterStandardTemplateType.Iso">
+            <summary>
+            ISO/IEC 19794-2 templates.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterStandardTemplateType.Ansi">
+            <summary>
+            ANSI/INCITS 378-2004 templates.
+            </summary>
+        </member>
+        <member name="T:Neurotec.Cluster.ClusterInsertDeleteStatus">
+            <summary>
+            Enumerates insert and delete tasks status values.
+            
+            
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterInsertDeleteStatus.None">
+            <summary>
+            Indicates that insert or delete task is not started yet.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterInsertDeleteStatus.OK">
+            <summary>
+            Indicates that insert or delete task succeeded.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterInsertDeleteStatus.InternalError">
+            <summary>
+            Indicates that during insert or delete task internal occurred.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterInsertDeleteStatus.InvalidFormat">
+            <summary>
+            Insert or delete task has invalid format.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterInsertDeleteStatus.DatabaseError">
+            <summary>
+            Indicates that during insert or delete task database error occurred.
+            </summary>
+        </member>
+        <member name="T:Neurotec.Cluster.ClusterException">
+            <summary>
+            The exception that is thrown when object Communication was
+            wrong initialized.
+            </summary>
+        </member>
+        <member name="P:Neurotec.Cluster.ClusterException.Status">
+            <summary>
+            Gets or sets ClusterStatusCode value.
+            </summary>
+            <value>
+            One of the ClusterStatusCode values.
+            </value>
+        </member>
+        <member name="M:Neurotec.Cluster.ClusterException.#ctor(Neurotec.Cluster.ClusterStatusCode)">
+            <summary>
+            Initializes a new instance of the ClusterException class.
+            </summary>
+            <param name="code">One of the ClusterStatusCode values.</param>
+        </member>
+        <member name="M:Neurotec.Cluster.ClusterException.ToString">
+            <summary>
+            Creates and returns a string representation of the current
+            exception.
+            </summary>
+            <returns>A string representation of the current exception.</returns>
+        </member>
+        <member name="T:Neurotec.Cluster.NCluster">
+            <summary>
+            Provides methods for retrieving information about the
+            NCluster library.
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.NCluster.DllName">
+            <summary>
+            Name of DLL containing unmanaged part of this class.
+            </summary>
+        </member>
+        <member name="P:Neurotec.Cluster.NCluster.NativeModule">
+            <summary>
+            Defines the native module of the object.
+            </summary>
+        </member>
+        <member name="T:Neurotec.Cluster.ClientPacket">
+            <summary>
+            Enables to create matching task packet and data receive
+            packet. 
+            </summary>
+        </member>
+        <member name="M:Neurotec.Cluster.ClientPacket.CreateTask(Neurotec.Cluster.ClusterTaskMode,System.Byte[],System.String,Neurotec.Cluster.MatchingParameters,System.Int32)">
+            <summary>
+            Creates matching task packet.
+            </summary>
+            <param name="mode">One of the ClusterTaskMode
+                               values.</param>
+            <param name="template">Packed NTemplate.</param>
+            <param name="query">SQL query.</param>
+            <param name="parameters">\Parameters for algorithm.</param>
+            <param name="resultsLimit">Maximum number of results to
+                                        collect on server. 0 is used for
+                                        no limit.</param>
+            <returns>
+            ClientPacket object
+            </returns>
+            <remarks>
+            SQL query. Default query parameter is &quot;select node_id,
+            dbid FROM node_tbl&quot;.
+            
+            
+            
+            <b>For MegaMatcher Accelerator</b>
+            
+            SQL query. Two types of strings are possible to pass through
+            query parameter:
+            
+            \1. &quot;&lt; number&quot;
+            
+            \2. &quot;&gt; number&quot;
+            
+            <b>Example</b>
+            
+            &quot;&lt; 5000&quot;
+            
+            <b>Note</b>
+            
+            Inner database templates identifiers must be numbers. See
+            CreatePacket_InsertTemplates for inserting templates to inner
+            database.
+            <paraattr align="justify">
+            <b>Important</b>
+            
+            Every fingerprint record (NFRecord) in NTempalte must have G
+            and 10 or more minutiae. Also every minutiae should contain
+            curvatures. Records without G and curvature will be matched
+            slower, accuracy will be the same.
+            </paraattr>
+            
+            </remarks>
+        </member>
+        <member name="M:Neurotec.Cluster.ClientPacket.CreateTask(Neurotec.Cluster.ClusterTaskMode,System.Byte[],Neurotec.Cluster.ClusterStandardTemplateType,System.String,Neurotec.Cluster.MatchingParameters,System.Int32)">
+            <summary>
+            Creates
+            </summary>
+            <param name="mode">Cluster task mode.</param>
+            <param name="template">Task template.</param>
+            <param name="templateType">Template type.</param>
+            <param name="query">Cluster query.</param>
+            <param name="parameters">Matching parameters.</param>
+            <param name="resultsLimit">Limit of results.</param>
+            <returns>ClientPacket object.</returns>
+        </member>
+        <member name="M:Neurotec.Cluster.ClientPacket.CreateProgressRequest(System.Int32)">
+            <summary>
+            Creates matching task progress request packet.
+            </summary>
+            <param name="taskId">The task id to retrieve its progress.</param>
+            <returns>
+            ClientPacket object 
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.ClientPacket.CreateResultRequest(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates matching task results request packet.
+            </summary>
+            <param name="taskId">The task id.</param>
+            <param name="lowRange">One\-based index of first wanted
+                                   \result.</param>
+            <param name="highRange">One\-based index of last wanted
+                                    \result.</param>
+            <returns>
+            ClientPacket object
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.ClientPacket.CreateResultDelete(System.Int32)">
+            <summary>
+            Creates matching task results delete packet.
+            </summary>
+            <param name="taskId">ID of a task which results should be
+                                 deleted.</param>
+            <returns>
+            ClientPacket object.
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.ClientPacket.DestroyPacket">
+            <summary>
+            Destroys packet.
+            </summary>
+            <returns>
+            One of the ClusterStatusCode values.
+            </returns>
+        </member>
+        <member name="T:Neurotec.Cluster.AdminPacket">
+            <summary>
+            Enables to create packets for server administration. 
+            </summary>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacket.CreatePacket_DatabaseFlush">
+            <summary>
+            Creates packet for clearing and reloading templates in an internal structure on server.
+            </summary>
+            <returns>
+            AdminPacket object.
+            </returns>
+            <remarks>
+            It is recommended to flush database periodically, for example at night, <b>because during flush
+            database server will not accept tasks.</b> Database flush command frequency depends on how often new
+            templates are inserted into database. It is recommended to perform database flush after inserting 100
+            000 fingerprints. 
+            </remarks>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacket.CreatePacket_InsertTemplates(System.String[],System.Byte[][])">
+            <summary>
+            Creates packet for inserting templates into internal servers database.
+            </summary>
+            <param name="ids">String array of templates identifiers. It is recommended to use numbers for
+                              identifiers. If numbers are identifiers, the query parameter for matching
+                              can be used.</param>
+            <param name="templates">Array of packed NTemplates.</param>
+            <returns>
+            AdminPacket object.
+            </returns>
+            <remarks>
+            Before inserting templates you should open a socket.
+            
+            <b>Important</b>: Every fingerprint record (NFRecord) in NTempalte must have G, Curvature and Quality
+            and 10 or more minutiae. Records without any of these parameters will be matched slower, accuracy
+            will be the same or better
+            
+            
+            </remarks>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacket.CreatePacket_InsertTemplates(System.String[],System.Byte[][],Neurotec.Cluster.ClusterStandardTemplateType[])">
+            <summary>
+            Creates packet for inserting templates into internal servers database.
+            </summary>
+            <param name="ids">String array of templates identifiers. It is recommended to use numbers
+                              for identifiers. If numbers are identifiers, the query parameter for
+                              matching can be used.</param>
+            <param name="templates">Array of packed NTemplates.</param>
+            <param name="templateTypes">Type of insert templates. ISO or ANSI templates can be used.</param>
+            <returns>
+            AdminPacket object.
+            </returns>
+            <remarks>
+            Before inserting templates you should open a socket.
+            <paraattr align="justify">
+            <b>Important</b>: Every fingerprint record (NFRecord) in NTempalte must have G, Curvature and Quality
+            and 10 or more minutiae. Records without any of these parameters will be matched slower, accuracy
+            will be the same or better
+            </paraattr>
+            
+            </remarks>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacket.CreatePacket_InsertTemplates(System.Int32,System.Object[][])">
+            <summary>
+            Creates packet for inserting templates into internal servers database.
+            </summary>
+            <param name="keyIndex">Key index of the database.</param>
+            <param name="values">An array of templates to insert to the database.</param>
+            <returns>AdminPacket object.</returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacket.CreatePacket_DeleteTemplates(System.String[])">
+            <summary>
+            Creates packet for deleting templates from internal server's database.
+            </summary>
+            <param name="ids">String array which contains identifiers of templates to delete.</param>
+            <returns>
+            AdminPacket object.
+            </returns>
+            <remarks>
+            It is recommend to resplit database after deleting more then 100 000 templates. See
+            CreatePacket_DatabaseUpdate 
+            </remarks>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacket.CreatePacket_DatabaseUpdate">
+            <summary>
+            Builds database update packet.
+            </summary>
+            <returns>
+            An object of AdminPacket.
+            </returns>
+            <remarks>
+            When server receives update command it would initiate
+            database redistribution (resplit) to nodes process.
+            
+            <b>For MegaMatcher Accelerator</b>
+            
+            It is recommended to resplit database periodically, for
+            \example at night, <b>because during resplit database server
+            will not accept tasks.</b> For example, it is recommend to
+            resplit database after deleting more than 100 000 templates. 
+            </remarks>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacket.CreatePacket_NodesInfoRequest">
+            <summary>
+            Builds nodes info request packet.
+            </summary>
+            <returns>
+            An object of AdminPacket.
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacket.CreatePacket_ServerInfoRequest">
+            <summary>
+            Builds server info request packet.
+            </summary>
+            <returns>
+            A newly created admin packet.
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacket.CreatePacket_ResultsInfoRequest">
+            <summary>
+            Builds results info request packet.
+            </summary>
+            <returns>
+            An object of AdminPacket.
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacket.CreatePacket_ServerKill">
+            <summary>
+            Builds server kill packet.
+            </summary>
+            <returns>
+            An object of AdminPacket.
+            </returns>
+            <remarks>
+            <paraattr align="justify">
+            After killing the server nodes will stop working too. When
+            starting a server which was killed previously database split
+            to nodes will be performed. So before starting the server
+            nodes must be connected for splitting database. Otherwise
+            server will not be able to database spit.
+            </paraattr>
+            </remarks>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacket.CreatePacket_ServerStart">
+            <summary>
+            Builds server start packet.
+            </summary>
+            <returns>
+            An object of AdminPacket.
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacket.CreatePacket_TasksInfoRequest">
+            <summary>
+            Builds complete running tasks info request packet.
+            </summary>
+            <returns>
+            An object of AdminPacket.
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacket.CreatePacket_TasksShortInfoRequest">
+            <summary>
+            Builds short running tasks info request packet.
+            </summary>
+            <returns>
+            An object of AdminPacket.
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacket.CreatePacket_NodeStop(System.Int32)">
+            <summary>
+            Builds cluster node stop packet.
+            </summary>
+            <param name="nodeId">ID of node or server that should be
+                                 stopped.</param>
+            <returns>
+            An object of AdminPacket.
+            </returns>
+            <remarks>
+            <paraattr align="justify">
+            When stopped node saves its current state. Node is only
+            stoped if no matching tasks are left. Starting stoped node
+            will be quicker than starting killed node because database
+            split will not be performed by server.
+            
+            Also NServer is capable of saving sessions that contain
+            server's state. When NServer will be started next time, it
+            will restore previous configuration. You should note that it
+            is possible to restore server's state only when server was
+            stoped by using stop command.
+            </paraattr>
+            </remarks>
+            Note
+            Parameter nodeID must be 0 to stop NServer or NClusterServer.
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacket.CreatePacket_NodeKill(System.Int32)">
+            <summary>
+            Builds node kill packet.
+            </summary>
+            <param name="nodeId">ID of a node to be killed.</param>
+            <returns>
+            An object of AdminPacket.
+            </returns>
+            <remarks>
+            Server must resplit all database to all nodes, when the
+            killed nodes are again joined to server.
+            </remarks>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacket.CreatePacket_UpdateDatabaseIDs(System.String[])">
+            <summary>
+            Builds server database templates update packet.
+            </summary>
+            <returns>
+            An object of AdminPacket.
+            </returns>
+            <param name="ids">The IDs of fields in database to update.</param> 
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacket.CreatePacket_InsertRequest(System.Int32)">
+            <summary>
+            Sends a packet to the cluster server requesting for insert task result.
+            </summary>
+            <param name="taskId">Id of a task to request its information.</param>
+            <returns>
+            AdminPacket object. 
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacket.CreatePacket_DeleteRequest(System.Int32)">
+            <summary>
+            Sends a packet to the cluster server requesting for delete
+            task result.
+            </summary>
+            <param name="taskId">Id of a task to request its
+                                 information.</param>
+            <returns>
+            AdminPacket object. 
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacket.DestroyPacket">
+            <summary>
+            Destroys packet.
+            </summary>
+            <returns>
+            One of the ClusterStatusCode values. 
+            </returns>
+        </member>
+        <member name="T:Neurotec.Cluster.ClusterResults">
+            <summary>
+            Represents returned data from the server. 
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterResults.id">
+            <summary>
+            \Result identification string.
+            </summary>                    
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterResults.md">
+            <summary>
+            Serialized match details. See
+            Neurotec.Biometrics.NMMatchDetails.
+            </summary>                         
+        </member>
+        <member name="F:Neurotec.Cluster.ClusterResults.similarity">
+            <summary>
+            \Result similarity.
+            </summary>         
+        </member>
+        <member name="T:Neurotec.Cluster.ClientPacketReceived">
+            <summary>
+            Provides functionality for extracting received task and
+            results information packet. 
+            </summary>
+        </member>
+        <member name="M:Neurotec.Cluster.ClientPacketReceived.GetResultsStatus(System.Int32@)">
+            <summary>
+            Gets results status.
+            </summary>
+            <param name="status">[out] If parameter is not equal to 0,
+                                 then error occurred and method
+                                 GetResultsErrorString should be used to
+                                 get error string.</param>
+            <returns>
+            One of the ClusterStatusCode values. 
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.ClientPacketReceived.GetResultsProgress(System.Int32@)">
+            <summary>
+            Gets results progress.
+            </summary>
+            <param name="progress">[out] Results progress.</param>
+            <returns>
+            One of the ClusterStatusCode values.
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.ClientPacketReceived.GetResultsErrorString(System.String@)">
+            <summary>
+            Gets results error.
+            </summary>
+            <param name="error">[out] Error description.</param>
+            <returns>
+            One of the ClusterStatusCode values.
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.ClientPacketReceived.GetResults(Neurotec.Cluster.ClusterResults[]@)">
+            <summary>
+            Gets task results.
+            </summary>
+            <param name="results">[out] An array of ClusterResults.</param>
+            <returns>
+            One of the ClusterStatusCode values.
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.ClientPacketReceived.GetTaskProgress(System.Int32@,System.Int32@)">
+            <summary>
+            Gets task progress.
+            </summary>
+            <param name="progress">[out] Task progress.</param>
+            <param name="resultCount">[out] Matching task results count.</param>
+            <returns>
+            One of the ClusterStatusCode values. 
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.ClientPacketReceived.GetTaskID(System.Int32@)">
+            <summary>
+            Gets results progress.
+            </summary>
+            <param name="taskId">[out] Task identifier.</param>
+            <returns>
+            One of the ClusterStatusCode values.
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.ClientPacketReceived.DestroyPacket">
+            <summary>
+            Destroys packet.
+            </summary>
+            <returns>
+            One of the ClusterStatusCode values.
+            </returns>
+        </member>
+        <member name="T:Neurotec.Cluster.NodeInfo">
+            <summary>
+            Represents cluster node state. 
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.NodeInfo.id">
+            <summary>
+            Cluster node id.
+            </summary>      
+        </member>
+        <member name="F:Neurotec.Cluster.NodeInfo.state">
+            <summary>
+            One of the ClusterNodeState values.
+            </summary>                         
+        </member>
+        <member name="T:Neurotec.Cluster.WorkingNodeInfo">
+            <summary>
+            Represents working nodes information. 
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.WorkingNodeInfo.nodeId">
+            <summary>
+            Cluster node id.
+            </summary>      
+        </member>
+        <member name="F:Neurotec.Cluster.WorkingNodeInfo.progress">
+            <summary>
+            Nodes progress of matching task.
+            </summary>                      
+        </member>
+        <member name="T:Neurotec.Cluster.TaskInfo">
+            <summary>
+            Represents tasks information. 
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.TaskInfo.taskId">
+            <summary>
+            Id of matching task.
+            </summary>          
+        </member>
+        <member name="F:Neurotec.Cluster.TaskInfo.nodesCompleted">
+            <summary>
+            Number of nodes that have finished matching task execution.
+            </summary>                                                 
+        </member>
+        <member name="F:Neurotec.Cluster.TaskInfo.workingNodes">
+            <summary>
+            Total number of nodes executing matching task.
+            </summary>                                    
+        </member>
+        <member name="F:Neurotec.Cluster.TaskInfo.taskProgress">
+            <summary>
+            Matching task execution progress.
+            </summary>                       
+        </member>
+        <member name="F:Neurotec.Cluster.TaskInfo.workingNodeInfo">
+            <summary>
+            Information about nodes executing matching task.
+            </summary>                                      
+        </member>
+        <member name="T:Neurotec.Cluster.TaskShortInfo">
+            <summary>
+            Represents short tasks information. 
+            </summary>
+        </member>
+        <member name="F:Neurotec.Cluster.TaskShortInfo.taskId">
+            <summary>
+            Id of matching task.
+            </summary>          
+        </member>
+        <member name="F:Neurotec.Cluster.TaskShortInfo.nodesCompleted">
+            <summary>
+            Number of nodes that have finished matching task execution.
+            </summary>                                                 
+        </member>
+        <member name="F:Neurotec.Cluster.TaskShortInfo.workingNodes">
+            <summary>
+            Total number of nodes executing matching task.
+            </summary>                                    
+        </member>
+        <member name="F:Neurotec.Cluster.TaskShortInfo.taskProgress">
+            <summary>
+            Matching task execution progress.
+            </summary>                       
+        </member>
+        <member name="T:Neurotec.Cluster.AdminPacketReceived">
+            <summary>
+            Provides functionality to extract received administration
+            packet. 
+            </summary>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacketReceived.GetResults(System.Int32[]@)">
+            <summary>
+            Gets ids of tasks which results are available for retrieval.
+            </summary>
+            <param name="results">[out] Ids of tasks which results are
+                                  available for retrieval.</param>
+            <returns>
+            One of the ClusterStatusCode values. 
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacketReceived.GetNodesInfo(Neurotec.Cluster.NodeInfo[]@)">
+            <summary>
+            Retrieves information about each node in cluster server.
+            </summary>
+            <param name="info">[out] An array of NodeInfo objects which
+                               contain information about each node in a
+                               cluster server.</param>
+            <returns>
+            One of the ClusterStatusCode values. 
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacketReceived.GetTasksInfo(Neurotec.Cluster.TaskInfo[]@)">
+            <summary>
+            Retrieves information about tasks on the cluster.
+            </summary>
+            <param name="info">[out] An array that contains ids of each
+                               task.</param>
+            <returns>
+            One of the ClusterStatusCode values. 
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacketReceived.GetTasksShortInfo(Neurotec.Cluster.TaskShortInfo[]@)">
+            <summary>
+            \Returns short information about tasks in each node.
+            </summary>
+            <param name="info">[out] An array of the TaskShortInfo
+                               objects that contains information about
+                               each task.</param>
+            <returns>
+            One of the ClusterStatusCode values.
+            </returns>
+            <remarks>
+            Method as an output parameter returns number of nodes that
+            completed tasks and number of working nodes, task id and task
+            progress (when task is not finished).
+            </remarks>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacketReceived.GetServerInfo(Neurotec.Cluster.ClusterServerStatus@)">
+            <summary>
+            Sends a packet requesting information from a server.
+            </summary>
+            <param name="serverStatus">[out] Cluster status information.</param>
+            <returns>
+            One of the ClusterStatusCode values. 
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacketReceived.GetInsertTaskId(System.Int32@)">
+            <summary>
+            Retrieves task Id from Client handle.
+            </summary>
+            <param name="taskId">[out] Task ID.</param>
+            <returns>
+            One of the ClusterStatusCode values.
+            
+            
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacketReceived.GetInsertTaskResult(Neurotec.Cluster.ClusterInsertDeleteResult@)">
+            <summary>
+            Retrieves result of insert task.
+            </summary>
+            <param name="result">[out] Result of insert task.</param>
+            <returns>
+            ClusterStatusCode object which contains insert task result.
+            
+            
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacketReceived.GetInsertTaskBatchSize(System.Int32@)">
+            <summary>
+            Retrieves size of insert tasks batch.
+            </summary>
+            <param name="batchSize">[out] Size of insert tasks batch.</param>
+            <returns>
+            One of the ClusterStatusCode values.
+            
+            
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacketReceived.GetInsertTaskStatus(System.Int32,Neurotec.Cluster.ClusterInsertDeleteStatus@)">
+            <summary>
+            Retrieves insert task status.
+            </summary>
+            <param name="templateIndex">Index of inserted template to retrieve status.</param>
+            <param name="status">[out] Status of insert task.</param>
+            <returns>
+            ClusterStatusCode object which contains insert task status.
+            
+            
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacketReceived.GetInsertTaskError(System.Int32,System.String@)">
+            <summary>
+            Retrieves errors of insert task.
+            </summary>
+            <param name="templateIndex">Index of template to retrieve its error message.</param>
+            <param name="errorStr">[out] Error message.</param>
+            <returns>
+            One of the ClusterStatusCode values.
+            
+            
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacketReceived.GetDeleteTaskId(System.Int32@)">
+            <summary>
+            Retrieves task Id from Client handle.
+            </summary>
+            <param name="taskId">[out] Task ID.</param>
+            <returns>
+            One of the ClusterStatusCode values.
+            
+            
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacketReceived.GetDeleteTaskResult(Neurotec.Cluster.ClusterInsertDeleteResult@)">
+            <summary>
+            Retrieves result of delete task.
+            </summary>
+            <param name="result">[out] Result of delete task.</param>
+            <returns>
+            ClusterStatusCode object which contains delete task result.
+            
+            
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacketReceived.GetDeleteTaskBatchSize(System.Int32@)">
+            <summary>
+            Retrieves size of delete tasks batch.
+            </summary>
+            <param name="batchSize">[out] Size of delete tasks batch.</param>
+            <returns>
+            One of the ClusterStatusCode values.
+            
+            
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacketReceived.GetDeleteTaskStatus(System.Int32,Neurotec.Cluster.ClusterInsertDeleteStatus@)">
+            <summary>
+            Retrieves delete task status.
+            </summary>
+            <param name="templateIndex">Index of deleted template to retrieve status.</param>
+            <param name="status">[out] Status of delete task.</param>
+            <returns>
+            ClusterStatusCode object which contains delete task status.
+            
+            
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacketReceived.GetDeleteTaskError(System.Int32,System.String@)">
+            <summary>
+            Retrieves errors of delete task.
+            </summary>
+            <param name="templateIndex">Index of template to retrieve its error message.</param>
+            <param name="errorStr">[out] Error message.</param>
+            <returns>
+            One of the ClusterStatusCode values.
+            
+            
+            </returns>
+        </member>
+        <member name="M:Neurotec.Cluster.AdminPacketReceived.DestroyPacket">
+            <summary>
+            Destroys received packet.
+            </summary>
+            <returns>
+            One of the ClusterStatusCode values. 
+            </returns>
+        </member>
+        <member name="T:Neurotec.Cluster.MatchingParameters">
+            <summary>
+            Provides functionality to collect matching parameters. 
+            </summary>
+        </member>
+        <member name="M:Neurotec.Cluster.MatchingParameters.AddParameter(System.UInt32,System.UInt32,System.Byte)">
+            <summary>
+            Adds parameter value.
+            </summary>
+            <param name="part">Value of the specified parameter of the
+                               specified NMatcher.</param>
+            <param name="id">The parameter identifier.</param>
+            <param name="value">The parameter value.</param>          
+        </member>
+        <member name="M:Neurotec.Cluster.MatchingParameters.AddParameter(System.UInt32,System.UInt32,System.Int16)">
+            <summary>
+            Adds parameter value.
+            </summary>
+            <param name="part">Value of the specified parameter of the
+                               specified NMatcher.</param>
+            <param name="id">The parameter identifier.</param>
+            <param name="value">The parameter value.</param>          
+        </member>
+        <member name="M:Neurotec.Cluster.MatchingParameters.AddParameter(System.UInt32,System.UInt32,System.UInt16)">
+            <summary>
+            Adds parameter value.
+            </summary>
+            <param name="part">Value of the specified parameter of the
+                               specified NMatcher.</param>
+            <param name="id">The parameter identifier.</param>
+            <param name="value">The parameter value.</param>          
+        </member>
+        <member name="M:Neurotec.Cluster.MatchingParameters.AddParameter(System.UInt32,System.UInt32,System.Int32)">
+            <summary>
+            Adds parameter value.
+            </summary>
+            <param name="part">Value of the specified parameter of the
+                               specified NMatcher.</param>
+            <param name="id">The parameter identifier.</param>
+            <param name="value">The parameter value.</param>          
+        </member>
+        <member name="M:Neurotec.Cluster.MatchingParameters.AddParameter(System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            Adds parameter value.
+            </summary>
+            <param name="part">Value of the specified parameter of the
+                               specified NMatcher.</param>
+            <param name="id">The parameter identifier.</param>
+            <param name="value">The parameter value.</param>          
+        </member>
+        <member name="M:Neurotec.Cluster.MatchingParameters.AddParameter(System.UInt32,System.UInt32,System.UInt64)">
+            <summary>
+            Adds parameter value.
+            </summary>
+            <param name="part">Value of the specified parameter of the
+                               specified NMatcher.</param>
+            <param name="id">The parameter identifier.</param>
+            <param name="value">The parameter value.</param>          
+        </member>
+        <member name="M:Neurotec.Cluster.MatchingParameters.AddParameter(System.UInt32,System.UInt32,System.Boolean)">
+            <summary>
+            Adds parameter value.
+            </summary>
+            <param name="part">Value of the specified parameter of the
+                               specified NMatcher.</param>
+            <param name="id">The parameter identifier.</param>
+            <param name="value">The parameter value.</param>          
+        </member>
+        <member name="M:Neurotec.Cluster.MatchingParameters.AddParameter(System.UInt32,System.Byte)">
+            <summary>
+            Adds parameter value.
+            </summary>
+            <param name="id">The parameter identifier.</param>
+            <param name="value">The parameter value.</param>
+        </member>
+        <member name="M:Neurotec.Cluster.MatchingParameters.AddParameter(System.UInt32,System.Int16)">
+            <summary>
+            Adds parameter value.
+            </summary>
+            <param name="id">The parameter identifier.</param>
+            <param name="value">The parameter value.</param>
+        </member>
+        <member name="M:Neurotec.Cluster.MatchingParameters.AddParameter(System.UInt32,System.UInt16)">
+            <summary>
+            Adds parameter value.
+            </summary>
+            <param name="id">The parameter identifier.</param>
+            <param name="value">The parameter value.</param>
+        </member>
+        <member name="M:Neurotec.Cluster.MatchingParameters.AddParameter(System.UInt32,System.Int32)">
+            <summary>
+            Adds parameter value.
+            </summary>
+            <param name="id">The parameter identifier.</param>
+            <param name="value">The parameter value.</param>
+        </member>
+        <member name="M:Neurotec.Cluster.MatchingParameters.AddParameter(System.UInt32,System.UInt32)">
+            <summary>
+            Adds parameter value.
+            </summary>
+            <param name="id">The parameter identifier.</param>
+            <param name="value">The parameter value.</param>
+        </member>
+        <member name="M:Neurotec.Cluster.MatchingParameters.AddParameter(System.UInt32,System.Int64)">
+            <summary>
+            Adds parameter value.
+            </summary>
+            <param name="id">The parameter identifier.</param>
+            <param name="value">The parameter value.</param>
+        </member>
+        <member name="M:Neurotec.Cluster.MatchingParameters.AddParameter(System.UInt32,System.Double)">
+            <summary>
+            Adds parameter value.
+            </summary>
+            <param name="id">The parameter identifier.</param>
+            <param name="value">The parameter value.</param>
+        </member>
+        <member name="M:Neurotec.Cluster.MatchingParameters.AddParameter(System.UInt32,System.Boolean)">
+            <summary>
+            Adds parameter value.
+            </summary>
+            <param name="id">The parameter identifier.</param>
+            <param name="value">The parameter value.</param>
+        </member>
+        <member name="M:Neurotec.Cluster.MatchingParameters.AddParameter(System.UInt32,System.UInt32,System.Double)">
+            <summary>
+            Adds parameter value.
+            </summary>
+            <param name="part">Value of the specified parameter of the
+                               specified NMatcher.</param>
+            <param name="id">The parameter identifier.</param>
+            <param name="value">The parameter value.</param>          
+        </member>
+    </members>
+</doc>

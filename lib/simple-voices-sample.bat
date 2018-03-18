@@ -1,0 +1,1 @@
+javaw -jar simple-voices-sample.jar
