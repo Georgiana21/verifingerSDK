@@ -1,3 +1,5 @@
+import com.neurotec.io.NBuffer;
+import com.neurotec.io.NFile;
 import jdk.internal.util.xml.impl.Input;
 import sun.misc.IOUtils;
 
@@ -10,25 +12,22 @@ import javax.servlet.http.HttpServletResponse;
 import java.awt.image.BufferedImage;
 import java.io.*;
 
-@WebServlet(name = "ReceiveImageServlet")
-public class ReceiveImageServlet extends HttpServlet {
+@WebServlet(name = "ReceiveTemplateServlet")
+public class ReceiveTemplateServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //BufferedReader isr = new BufferedReader(new InputStreamReader(request.getInputStream()));
-        //String user = isr.readLine();
-
         BufferedInputStream reader = new BufferedInputStream(request.getInputStream());
         byte[] buff = new byte[1000];
         ByteArrayOutputStream output = new ByteArrayOutputStream();
         int bytesRead = 0;
         while ((bytesRead = reader.read(buff)) != -1)
             output.write(buff,0,bytesRead);
-        byte[] img = output.toByteArray();
-        int size = img.length;
-        BufferedImage image = ImageIO.read(new ByteArrayInputStream(img));
+        byte[] template = output.toByteArray();
+        int size = template.length;
         String user = request.getHeader("user");
-        ImageIO.write(image,"png", new File("D:\\" + user + ".png"));
+        NBuffer buffer = new NBuffer(template);
+        NFile.writeAllBytes("D:\\"+user, buffer);
         System.out.println("file written");
     }
 }
