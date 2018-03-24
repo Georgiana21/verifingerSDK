@@ -1,10 +1,9 @@
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
 import javax.sql.rowset.serial.SerialBlob;
-import java.sql.Blob;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class DatabaseHelper {
 
@@ -33,6 +32,26 @@ public class DatabaseHelper {
         Blob blob = new SerialBlob(template);
         statement.setBlob(2, blob);
         statement.executeUpdate();
+        statement.close();
         connection.close();
+    }
+
+    public Map<String, byte[]> getUsersAndTemplate() throws SQLException {
+        Map<String, byte[]> users = new HashMap<>();
+
+        Connection connection = dataSource.getConnection();
+        PreparedStatement statement = connection.prepareStatement("select user_name, finger_template from user");
+        ResultSet result = statement.executeQuery();
+
+        while(result.next()){
+            String user = result.getString("user_name");
+            Blob blob = result.getBlob("finger_template");
+            users.put(user,blob.getBytes(1,(int)blob.length()));
+        }
+
+        result.close();
+        statement.close();
+        connection.close();
+        return users;
     }
 }
