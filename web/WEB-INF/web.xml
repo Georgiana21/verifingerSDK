@@ -12,8 +12,8 @@
     </servlet>
 
     <servlet>
-        <servlet-name>ReceiveTemplateServlet</servlet-name>
-        <servlet-class>ReceiveTemplateServlet</servlet-class>
+        <servlet-name>IdentifyServlet</servlet-name>
+        <servlet-class>IdentifyServlet</servlet-class>
     </servlet>
 
     <!-- Note: All <servlet> elements MUST be grouped together and
@@ -23,9 +23,10 @@
         <servlet-name>EnrollmentServlet</servlet-name>
         <url-pattern>/enrollment</url-pattern>
     </servlet-mapping>
-    
+
+
     <servlet-mapping>
-        <servlet-name>ReceiveTemplateServlet</servlet-name>
-        <url-pattern>/receiveTemplateServlet</url-pattern>
+        <servlet-name>IdentifyServlet</servlet-name>
+        <url-pattern>/identify</url-pattern>
     </servlet-mapping>
 </web-app>

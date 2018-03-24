@@ -17,7 +17,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.EnumSet;
 
-public class FingerPrintApplet extends Applet{
+public class EnrollmentApplet extends Applet{
 
     private Image image;
     private TextField resultField = new TextField(100);
@@ -87,7 +87,7 @@ public class FingerPrintApplet extends Applet{
 
     public void sendTemplateToServer(){
         try {
-            URL url = new URL(getCodeBase(), "/receiveTemplateServlet");
+            URL url = new URL(getCodeBase(), "/enrollment");
             URLConnection con = url.openConnection();
             if (con instanceof HttpURLConnection) {
                 ((HttpURLConnection)con).setRequestMethod("POST");

@@ -46,5 +46,6 @@
     <orderEntry type="library" name="neurotec-media-processing" level="project" />
     <orderEntry type="library" name="neurotec-licensing" level="project" />
     <orderEntry type="library" name="neurotec-biometrics-client" level="project" />
+    <orderEntry type="library" name="mysql-connector-java" level="project" />
   </component>
 </module>

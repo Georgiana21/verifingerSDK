@@ -7,29 +7,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25489f5c-a4c2-4601-80f7-4fa0e1a0b93a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/neurotec_biometrics_client.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/neurotec-biometrics-client.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/neurotec-biometrics-client.jar" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/DatabaseHelper.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/EnrollmentApplet.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/WEB-INF/classes/DatabaseHelper.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/WEB-INF/classes/EnrollmentApplet.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/VeriFingerSDK/DatabaseHelper.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/VeriFingerSDK/EnrollmentApplet.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/DatabaseHelper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/IdentifyApplet.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/IdentifyServlet.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/DatabaseHelper.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/EnrollmentApplet.class" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/VeriFingerSDK.iml" afterPath="$PROJECT_DIR$/VeriFingerSDK.iml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/FingerPrintApplet.class" afterPath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/FingerPrintApplet.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/ReceiveImageServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/ReceiveImageServlet.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/Servlet.class" afterPath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/Servlet.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/WEB-INF/classes/FingerPrintApplet.class" afterPath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/WEB-INF/classes/FingerPrintApplet.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/WEB-INF/classes/ReceiveImageServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/WEB-INF/classes/ReceiveImageServlet.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/WEB-INF/classes/Servlet.class" afterPath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/WEB-INF/classes/Servlet.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/EnrollmentServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/EnrollmentServlet.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/ReceiveTemplateServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/ReceiveTemplateServlet.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/WEB-INF/classes/EnrollmentServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/WEB-INF/classes/EnrollmentServlet.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/WEB-INF/classes/ReceiveTemplateServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/WEB-INF/classes/ReceiveTemplateServlet.class" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/VeriFingerSDK/FingerPrintApplet.class" afterPath="$PROJECT_DIR$/out/production/VeriFingerSDK/FingerPrintApplet.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/VeriFingerSDK/ReceiveImageServlet.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/VeriFingerSDK/Servlet.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/FingerPrintApplet.java" afterPath="$PROJECT_DIR$/src/FingerPrintApplet.java" />
-      <change beforePath="$PROJECT_DIR$/src/ReceiveImageServlet.java" afterPath="$PROJECT_DIR$/src/ReceiveTemplateServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/Servlet.java" afterPath="$PROJECT_DIR$/src/EnrollmentServlet.java" />
-      <change beforePath="$PROJECT_DIR$/web/FingerPrintApplet.class" afterPath="$PROJECT_DIR$/web/FingerPrintApplet.class" />
-      <change beforePath="$PROJECT_DIR$/web/ReceiveImageServlet.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/Servlet.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/VeriFingerSDK/EnrollmentServlet.class" afterPath="$PROJECT_DIR$/out/production/VeriFingerSDK/EnrollmentServlet.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/VeriFingerSDK/FingerPrintApplet.class" afterPath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/FingerPrintApplet.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/VeriFingerSDK/ReceiveTemplateServlet.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/EnrollmentServlet.java" afterPath="$PROJECT_DIR$/src/EnrollmentServlet.java" />
+      <change beforePath="$PROJECT_DIR$/src/FingerPrintApplet.java" afterPath="$PROJECT_DIR$/src/EnrollmentApplet.java" />
+      <change beforePath="$PROJECT_DIR$/src/ReceiveTemplateServlet.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/EnrollmentServlet.class" afterPath="$PROJECT_DIR$/web/EnrollmentServlet.class" />
+      <change beforePath="$PROJECT_DIR$/web/FingerPrintApplet.class" afterPath="$PROJECT_DIR$/out/artifacts/VeriFingerSDK_war_exploded/WEB-INF/classes/FingerPrintApplet.class" />
+      <change beforePath="$PROJECT_DIR$/web/ReceiveTemplateServlet.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -42,21 +47,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EnrollmentServlet.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EnrollmentServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/EnrollmentServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+            <state relative-caret-position="442">
+              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FingerPrintApplet.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/FingerPrintApplet.java">
+      <file leaf-file-name="EnrollmentApplet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EnrollmentApplet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+            <state relative-caret-position="1164">
+              <caret line="96" column="79" lean-forward="false" selection-start-line="96" selection-start-column="79" selection-end-line="96" selection-end-column="79" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,20 +102,45 @@
       <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="44" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="44" />
+            <state relative-caret-position="340">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReceiveTemplateServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ReceiveTemplateServlet.java">
+      <file leaf-file-name="IdentifyApplet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/IdentifyApplet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="18" column="110" lean-forward="false" selection-start-line="18" selection-start-column="110" selection-end-line="18" selection-end-column="110" />
+            <state relative-caret-position="1938">
+              <caret line="114" column="44" lean-forward="false" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IdentifyServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/IdentifyServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="30" column="35" lean-forward="false" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DatabaseHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1521905137166" expanded="true" signature="995:1050" ph="insert into user... " />
               </folding>
             </state>
           </provider>
@@ -151,9 +181,14 @@
         <option value="$PROJECT_DIR$/src/FingerPrintAppletX.java" />
         <option value="$PROJECT_DIR$/src/ReceiveImageServlet.java" />
         <option value="$PROJECT_DIR$/src/Servlet.java" />
+        <option value="$PROJECT_DIR$/src/DatabaseHelper.java" />
+        <option value="$PROJECT_DIR$/src/FingerPrintApplet.java" />
+        <option value="$PROJECT_DIR$/src/IdentifyApplet.java" />
+        <option value="$PROJECT_DIR$/src/IdentifyServlet.java" />
+        <option value="$PROJECT_DIR$/src/EnrollmentApplet.java" />
+        <option value="$PROJECT_DIR$/src/ReceiveTemplateServlet.java" />
         <option value="$PROJECT_DIR$/src/EnrollmentServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/FingerPrintApplet.java" />
       </list>
     </option>
   </component>
@@ -255,7 +290,7 @@
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.0.48">
     <configuration name="FingerPrintApplet" type="Applet" factoryName="Applet" temporary="true">
       <option name="HTML_USED" value="false" />
-      <option name="MAIN_CLASS_NAME" value="FingerPrintApplet" />
+      <option name="MAIN_CLASS_NAME" value="EnrollmentApplet" />
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
@@ -446,12 +481,12 @@
       <workItem from="1520977445242" duration="138000" />
       <workItem from="1521139948610" duration="12403000" />
       <workItem from="1521281564981" duration="3003000" />
-      <workItem from="1521285346825" duration="23410000" />
+      <workItem from="1521285346825" duration="27480000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57386000" />
+    <option name="totallyTimeSpent" value="61456000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="374" y="0" width="1764" height="1047" extended-state="0" />
@@ -459,29 +494,29 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.37585813" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.391258" sideWeight="0.76716244" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.49410775" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.49410775" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36140725" sideWeight="0.70251715" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17048055" sideWeight="0.78130215" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17048055" sideWeight="0.21869783" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17048055" sideWeight="0.7712855" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17048055" sideWeight="0.22871453" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.6241419" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -504,14 +539,8 @@
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ReceiveTemplateServlet.java</url>
-          <line>19</line>
-          <properties />
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="23" />
+      <option name="time" value="26" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -524,7 +553,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FingerPrintApplet.java">
+    <entry file="file://$PROJECT_DIR$/src/EnrollmentApplet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
@@ -576,7 +605,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FingerPrintApplet.java">
+    <entry file="file://$PROJECT_DIR$/src/EnrollmentApplet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="41" />
@@ -628,7 +657,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FingerPrintApplet.java">
+    <entry file="file://$PROJECT_DIR$/src/EnrollmentApplet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="11" lean-forward="false" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
@@ -680,7 +709,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FingerPrintApplet.java">
+    <entry file="file://$PROJECT_DIR$/src/EnrollmentApplet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="11" lean-forward="false" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
@@ -732,7 +761,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FingerPrintApplet.java">
+    <entry file="file://$PROJECT_DIR$/src/EnrollmentApplet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="11" lean-forward="false" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
@@ -784,7 +813,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FingerPrintApplet.java">
+    <entry file="file://$PROJECT_DIR$/src/EnrollmentApplet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="11" lean-forward="false" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
@@ -881,39 +910,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EnrollmentServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/DatabaseHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-          <folding />
+          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1521905137166" expanded="true" signature="995:1050" ph="insert into user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IdentifyApplet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1938">
+          <caret line="114" column="44" lean-forward="false" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EnrollmentApplet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1164">
+          <caret line="96" column="79" lean-forward="false" selection-start-line="96" selection-start-column="79" selection-end-line="96" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ReceiveTemplateServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="18" column="110" lean-forward="false" selection-start-line="18" selection-start-column="110" selection-end-line="18" selection-end-column="110" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="340">
+          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="44" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="44" />
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FingerPrintApplet.java">
+    <entry file="file://$PROJECT_DIR$/src/IdentifyServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+        <state relative-caret-position="425">
+          <caret line="30" column="35" lean-forward="false" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EnrollmentServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
