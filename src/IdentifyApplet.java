@@ -21,7 +21,7 @@ public class IdentifyApplet extends Applet {
     private Image image;
     private TextField resultField = new TextField(100);
     private TextField user = new TextField(100);
-    private Button identify = new Button("identify");
+    private Button identify = new Button("Identify");
     private Button scan = new Button("Scan");
     final String components = "Devices.FingerScanners";
     final String fingerExtraction = "Biometrics.FingerExtraction";
@@ -37,12 +37,12 @@ public class IdentifyApplet extends Applet {
     }
 
     public void initLayout(){
-        add(new Label("Applet fingerprint test"), Label.LEFT);
+        setLayout(null);
         add(resultField);
         resultField.setEditable(false);
         resultField.setBounds(40,30,400,20);
         add(user);
-        user.setBounds(40,400,400,20);
+        user.setBounds(100,60,400,20);
         user.setEditable(false);
         scan.setBounds(450,30,50,20);
         add(scan);
@@ -50,11 +50,10 @@ public class IdentifyApplet extends Applet {
             scanFinger();
         });
         add(identify);
-        identify.setBounds(450,400,50,20);
+        identify.setBounds(40,60,50,20);
         identify.addActionListener(e -> {
             identifyUser();
         });
-        setLayout(null);
     }
 
     public void initVerifingerSDK(){
@@ -81,6 +80,7 @@ public class IdentifyApplet extends Applet {
             System.err.format("failed to capture from scanner, status: %s%n", status);
         }
         image = finger.getImage().toImage();
+        image = image.getScaledInstance(70,90,Image.SCALE_SMOOTH);
         scan.setEnabled(true);
         this.repaint();
     }
@@ -130,7 +130,7 @@ public class IdentifyApplet extends Applet {
 
     public void paint(Graphics g){
         if(image != null)
-            g.drawImage(image,100,50,this);
+            g.drawImage(image,520,30,this);
     }
 
 }
